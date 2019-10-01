@@ -1,0 +1,161 @@
+ul {
+	display: table;
+	margin: 15px 0px;
+}
+i {
+	font-size: 14px;
+}
+
+i.fas.fa-pen {
+	color: green;
+}
+
+i.far.fa-trash-alt {
+	color: crimson;
+}
+
+todo-list p {
+	display: inline;
+}
+
+p.done-true {
+	text-decoration: line-through;
+	font-style: italic;
+}
+
+p.done-false {
+	text-decoration: none;
+	font-style: normal;
+}
+
+.search {
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+p.search-label {
+    color: darkmagenta;
+    font-size: 18px;
+}
+
+.inp {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 200px;
+}
+.inp .label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 16px;
+  color: #9098a9;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+.inp .border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #07f;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: all 0.15s ease;
+}
+.inp input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 36px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid #c8ccd4;
+  background: none;
+  border-radius: 0;
+  color: mediumaquamarine;
+  transition: all 0.15s ease;
+}
+
+.inp input:not(:placeholder-shown) + span {
+  border-bottom: 0px;
+  color: #5a667f;
+  transform: translateY(-26px) scale(0.75);
+}
+.inp input:focus {
+	border-bottom: 0px;
+  background: none;
+  outline: none;
+}
+.inp input:focus + span {
+	border-bottom: 0px;
+  color: #07f;
+  transform: translateY(-26px) scale(0.75);
+}
+.inp input:focus + span + .border {
+	border-bottom: 0px;
+  transform: scaleX(1);
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 20px 0px;
+}
+
+li.ng-scope {
+    color: aliceblue;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+input.edit-field, input.add-field {
+    color: mediumaquamarine;
+    border: 1px solid seashell;
+    border-radius: 3px;
+    height: 18px;
+}
+
+button {
+    color: darkmagenta;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    height: 20px;
+    width: fit-content;
+}
+
+.add-todo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.add-button {
+	margin-left: 10px;
+}
+
+input.add-field {
+	width: 250px;
+}
+
+li form {
+    display: inline;
+}
+
+label {
+    color: aliceblue;
+    font-size: 18px;
+    margin-right: 15px;
+    font-weight: bolder;
+}
+
+i.fas.fa-plus {
+    font-size: larger;
+    width: 18px;
+}

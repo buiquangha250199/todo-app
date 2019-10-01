@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Todo Appplication</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./todo/bower_components/font-awesome/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+    </head>
+    <body>
+    	
+		<div ng-app="todoApp" id="app">
+		      <todo-list list="[<%= listTodo %>]"></todo-list>
+		</div>
+       
+      <script type="text/javascript" src="./todo/bower_components/angular/angular.min.js"></script>
+      <script type="text/javascript" src="./todo/dist/todo.js"></script>
+    </body>
+</html>
+

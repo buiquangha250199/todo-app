@@ -1,0 +1,37 @@
+<h1>{{self.message}}</h1>
+<div class="search">
+	<label for="inp" class="inp">
+		<input type="text" id="inp" placeholder="&nbsp;" ng-model="key">
+		<span class="label">Search</span>
+		<span class="border"></span>
+	</label>
+</div>
+<div class="list">		
+		<ul>
+			<li ng-repeat="todo in self.list | filter: key" >
+				<form action="done" method="post" accept-charset="utf-8">
+					<input type="text" name="checkName" value="{{todo.name}}" ng-hide="true">
+					<input type="checkbox" ng-model="todo.status" name="status" onChange="this.form.submit()">
+				</form>
+				<p class="done-{{todo.status}}" >{{todo.name}}<p>
+				<button><i class="fas fa-pen" ng-click="show=true"></i></button>
+				<form action="removeTodo" method="post" accept-charset="utf-8">
+					<input type="text" name="deleteName" value="{{todo.name}}" ng-hide="true">
+					<button type="submit"><i class="far fa-trash-alt" ></i></button>
+				</form>
+				<form action="editTodo" method="post" accept-charset="utf-8" ng-show="show">
+					<input type="text" name="editName" value="{{todo.name}}" ng-hide="true">
+					<input type="text" name="nameEditted" value="{{todo.name}}" class="edit-field">
+					<button ng-click="show=false" type="submit"><i class="fas fa-check"></i></button>
+				</form>
+			</li>
+		</ul>
+</div>
+
+<form action="addTodo" method="POST" >
+	<div class="add-todo">
+		<label for="">Add todo:</label>
+		<input type="text" class="add-field" name='newTodoName' placeholder=" Input here and press enter." required=""> 
+	</div>
+</form>
+
